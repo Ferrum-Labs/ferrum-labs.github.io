@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Ferrum Labs · Intelligence, Forged.</title>
+        <meta
+            name="description"
+            content="Ferrum Labs is a Rust-first collective forging modular AI systems: FerricLink (LangChain-inspired), FerricMap (LangGraph-inspired), and FerricMem (memory and retrieval)."
+        />
+        <meta name="color-scheme" content="light dark" />
+        <link
+            rel="icon"
+            href="assets/ferrum_light.png"
+            media="(prefers-color-scheme: light)"
+        />
+        <link
+            rel="icon"
+            href="assets/ferrum_dark.png"
+            media="(prefers-color-scheme: dark)"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --iron: #b7410e;
+                --iron-600: #9e380c;
+                --graphite: #30363d;
+                --bg: #f5f5f5;
+                --fg: #1b1d1f;
+                --gold: #d4af37;
+                --card: #ffffff;
+                --muted: #6b7280;
+                --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --bg: #181a1b;
+                    --fg: #ecedee;
+                    --card: #202325;
+                    --muted: #9aa3ad;
+                    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+                }
+            }
+            body {
+                margin: 0;
+                background: var(--bg);
+                color: var(--fg);
+                font-family: "Space Grotesk", system-ui;
+                line-height: 1.6;
+            }
+            .container {
+                max-width: 1120px;
+                margin: auto;
+                padding: 2rem;
+            }
+            header,
+            footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                background: var(--card);
+                box-shadow: var(--shadow);
+            }
+            header {
+                height: 60px;
+                overflow: visible;
+            }
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                text-decoration: none;
+                color: inherit;
+            }
+            .brand img {
+                height: 40px;
+                width: auto;
+            }
+            header .brand picture img {
+                height: 112px;
+                width: auto;
+            }
+            .btn {
+                padding: 0.6rem 1rem;
+                border-radius: 10px;
+                text-decoration: none;
+                font-weight: 600;
+                border: 1px solid var(--iron);
+                color: var(--fg);
+            }
+            .btn.primary {
+                background: var(--iron);
+                color: white;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            .card {
+                background: var(--card);
+                border-radius: 16px;
+                padding: 1.5rem;
+                box-shadow: var(--shadow);
+            }
+            .card h3 {
+                margin-top: 0;
+                color: var(--iron);
+            }
+            footer {
+                margin-top: 2rem;
+                color: var(--muted);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a class="brand" href="#">
+                <picture>
+                    <source
+                        srcset="assets/ferrum_dark.png"
+                        media="(prefers-color-scheme: dark)"
+                    />
+                    <source
+                        srcset="assets/ferrum_light.png"
+                        media="(prefers-color-scheme: light)"
+                    />
+                    <img src="assets/ferrum_light.png" alt="Ferrum Labs logo" />
+                </picture>
+            </a>
+            <a
+                class="btn primary"
+                href="https://github.com/Ferrum-Labs"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+            >
+        </header>
+
+        <main class="container">
+            <section>
+                <h2>Intelligence, Forged.</h2>
+                <p>
+                    Ferrum Labs crafts metal-strong building blocks for AI in
+                    Rust. Our ecosystem powers composable, reliable reasoning
+                    systems designed for performance and clarity.
+                </p>
+            </section>
+
+            <section class="grid" id="projects">
+                <div class="card">
+                    <img
+                        src="assets/ferrum_logo_embedded.svg"
+                        alt="FerricLink logo"
+                        style="height: 48px; width: auto"
+                    />
+                    <h3>FerricLink</h3>
+                    <p>
+                        LangChain-inspired, Rust-native framework for composing
+                        LLM tools, retrievers, and reasoning steps into reliable
+                        pipelines.
+                    </p>
+                    <ul>
+                        <li>🧩 Modular LinkNodes with strong typing</li>
+                        <li>
+                            📦 Ergonomic error handling and observability hooks
+                        </li>
+                        <li>🔌 Plug-ins for providers & vector stores</li>
+                    </ul>
+                    <a
+                        class="btn"
+                        href="https://github.com/Ferrum-Labs/ferriclink"
+                        target="_blank"
+                        >Repository</a
+                    >
+                </div>
+
+                <div class="card">
+                    <img
+                        src="assets/ferrum_logo_embedded.svg"
+                        alt="FerricMap logo"
+                        style="height: 48px; width: auto"
+                    />
+                    <h3>FerricMap</h3>
+                    <p>
+                        LangGraph-inspired orchestration engine that treats
+                        reasoning as a directed graph with controllable state,
+                        memory, and tools.
+                    </p>
+                    <ul>
+                        <li>🕸️ Deterministic node/edge traversal</li>
+                        <li>🔁 Cycles, branches, and checkpoints</li>
+                        <li>⚡ Async-friendly execution core</li>
+                    </ul>
+                    <a
+                        class="btn"
+                        href="https://github.com/Ferrum-Labs/ferricmap"
+                        target="_blank"
+                        >Repository</a
+                    >
+                </div>
+
+                <div class="card">
+                    <img
+                        src="assets/ferrum_logo_embedded.svg"
+                        alt="FerricMem logo"
+                        style="height: 48px; width: auto"
+                    />
+                    <h3>FerricMem</h3>
+                    <p>
+                        Associative memory and retrieval system that combines
+                        vector and structured memory adapters for intelligent
+                        recall in Rust.
+                    </p>
+                    <ul>
+                        <li>🧠 Memory persistence and context retrieval</li>
+                        <li>📚 Integrates seamlessly with FerricLink</li>
+                        <li>🔍 Vector and symbolic hybrid search</li>
+                    </ul>
+                    <a
+                        class="btn"
+                        href="https://github.com/Ferrum-Labs/ferricmem"
+                        target="_blank"
+                        >Repository</a
+                    >
+                </div>
+            </section>
+
+            <section class="card" style="margin-top: 2rem">
+                <h3>Forged, not glued.</h3>
+                <p>
+                    We believe AI systems should be composed from clear,
+                    interoperable parts — chains, maps, and memory — each
+                    engineered with Rust’s safety guarantees. The result is
+                    software that scales in capability and reliability.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <span
+                >© <span id="year"></span> Ferrum Labs. Built with Rusty
+                love.</span
+            >
+            <a class="btn" href="https://github.com/Ferrum-Labs">GitHub</a>
+        </footer>
+
+        <script>
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>
